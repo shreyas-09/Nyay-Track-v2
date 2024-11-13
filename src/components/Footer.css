@@ -1,0 +1,23 @@
+/* Footer styles */
+.footer-container {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    padding: 16px;
+  }
+  
+  .footer-contact {
+    color: #333;
+  }
+  
+  .footer-send-aor-button {
+    background-color: #0071e3;
+    color: white;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 20px;
+  }
+  
+  .footer-send-aor-button:hover {
+    background-color: #005bb5;
+  }
+  

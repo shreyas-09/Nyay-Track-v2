@@ -1,0 +1,55 @@
+/* DefectChecker.css */
+
+.defectCheckerContainer {
+    padding: 24px;
+    margin: 24px;
+    border-radius: 8px;
+  }
+  
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .addDefectButton {
+    background-color: transparent;
+    color: #5f6368; 
+    text-transform: none;
+    font-weight: bold;
+    padding: 6px 16px;
+    border: 1px solid #5f6368;
+    border-radius: 24px; 
+    box-shadow: none;
+  }
+  
+  .summaryContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .summaryItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .exportReportLink {
+    color: #3f51b5;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .exportReportLink:hover {
+    text-decoration: underline;
+  }
+  
+  
