@@ -44,7 +44,7 @@ const Badge = styled("div")({
 
 const DefectChecker = () => {
   const rows = [
-    { type: "Delay in filing", description: "The petition was filed after the stipulated time.", document: "Main petition", status: "Marked as defect", version: "View v1", daysRemaining: "NA" },
+    { type: "Delay in filing", description: "The petition was not filed within the stipulated time", document: "Main petition", status: "Marked as defect", version: "View v1", daysRemaining: "NA" },
     { type: "Incomplete documentation", description: "Missing supporting witness statements", document: "Affidavit", status: "Marked as defect", version: "View v1", daysRemaining: "NA" },
     { type: "Incorrect indexing", description: "Page numbers in the index do not match", document: "Main petition", status: "Marked as defect", version: "View v1", daysRemaining: "NA" },
     { type: "Incorrect court fees", description: "Court fee is not clearly mentioned in the receipt", document: "Main petition", status: "Marked as defect", version: "View v1", daysRemaining: "NA" },
@@ -69,7 +69,7 @@ const DefectChecker = () => {
         <Select defaultValue="" size="small" displayEmpty sx={{ minWidth: 120 }}>
           <MenuItem value="">All </MenuItem>
         </Select>
-        
+
       </div>
 
       <div className="summaryContainer">
