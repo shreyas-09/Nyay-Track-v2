@@ -62,7 +62,7 @@ const invokeLlamaAPI = async (context) => {
 };
 
 // Start the Fastify server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 fastify.listen({ port: PORT }, (err, address) => {
   if (err) {
     fastify.log.error(err);
