@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
-from s3_service import upload_file_to_s3
+from aws_service import upload_file_to_s3
 from llama_service import invoke_llama
-from dynamo_service import store_result_in_dynamodb
+from aws_service import store_result_in_dynamodb
 
 app = FastAPI()
 
