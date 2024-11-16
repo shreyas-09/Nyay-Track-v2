@@ -23,11 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # Backend-specific ignores
-backend/node_modules/
+backend/__pycache__/
 backend/.env
-backend/logs/
-backend/dist/
-backend/build/
+
 
 # Frontend-specific ignores
 frontend/node_modules/
