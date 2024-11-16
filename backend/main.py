@@ -5,6 +5,7 @@ from aws_service import store_result_in_dynamodb
 
 app = FastAPI()
 
+#API end point to upload a file, run a LLAMA model, and store the results in a Dynamo DB
 @app.post("/upload/")
 async def upload_and_process_file(file: UploadFile = File(...)):
     """
@@ -19,6 +20,7 @@ async def upload_and_process_file(file: UploadFile = File(...)):
         # Step 2: Invoke LLaMA model with the file content
         llama_response = invoke_llama(file_content.decode("utf-8"))
 
+        
         # Step 3: Store the LLaMA result in DynamoDB
         store_result_in_dynamodb(file_name, llama_response)
 
@@ -29,3 +31,15 @@ async def upload_and_process_file(file: UploadFile = File(...)):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+
+# API end point to fetch results from the DynamoDB
+@app.get("/results/")
+async def get_results(file_name: Optional[str] = Query(None)):
+    """
+    Fetches results from DynamoDB. If `file_name` is provided, fetch results for a specific file.
+    """
+    try:
+        results = fetch_results_from_dynamodb(file_name)
+        return {"results": results}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
