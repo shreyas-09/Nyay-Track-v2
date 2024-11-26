@@ -4,3 +4,11 @@ pydantic
 python-multipart
 requests
 boto3
+PyPDF2
+langchain
+faiss-cpu
+torch
+transformers
+huggingface-hub
+reportlab
+twilio

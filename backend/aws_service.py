@@ -27,7 +27,7 @@ def store_result_in_dynamodb(file_name: str, result: str):
 
 #Fetch data from Dynamo DB
 
-def fetch_results_from_dynamodb(file_name: str = None) -> List[dict]:
+def fetch_results_from_dynamodb(file_name: str = None):
     """
     Fetches results from DynamoDB. If `file_name` is provided, fetch results for that specific file.
     """
